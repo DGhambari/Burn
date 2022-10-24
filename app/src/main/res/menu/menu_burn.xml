@@ -4,6 +4,6 @@
 
     <item
         android:id="@+id/item_cancel"
-        android:title="@string/menu_cancelBurn"
+        android:title="@string/menu_cancelLocation"
         app:showAsAction="always"/>
 </menu>

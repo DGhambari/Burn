@@ -1,15 +1,15 @@
 <resources>
     <string name="app_name">Burn</string>
-    <string name="button_addBurn">Add Burn</string>
-    <string name="hint_burnTitle">Burn Title</string>
-    <string name="hint_burnDescription">Description </string>
-    <string name="menu_addBurn">Add</string>
-    <string name="menu_cancelBurn">Cancel</string>
-    <string name="enter_burn_title"> Please enter a Burn Title </string>
-    <string name="save_burn"> Save Burn </string>
+    <string name="button_addLocation">Add Location</string>
+    <string name="hint_locationTitle">Location Title</string>
+    <string name="hint_locationDescription">Description </string>
+    <string name="menu_addLocation">Add</string>
+    <string name="menu_cancelLocation">Cancel</string>
+    <string name="enter_location_title"> Please enter a Location Title </string>
+    <string name="save_location"> Save Location </string>
     <string name="button_addImage"> Add Image </string>
-    <string name="select_burn_image">Select burn image</string>
-    <string name="change_burn_image">Change burn image</string>
-    <string name="button_location">Set Location</string>
+    <string name="select_location_image">Select location image</string>
+    <string name="change_location_image">Change location image</string>
+    <string name="button_location">Set Map Location</string>
     <string name="title_activity_map">MapActivity</string>
 </resources>
