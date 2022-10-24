@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Gham/AndroidStudioProjects/Placemark-00/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.223" />
+        <entry key="..\:/Users/Gham/AndroidStudioProjects/Placemark-00/app/src/main/res/drawable/ic_launcher_background.xml" value="0.223" />
+        <entry key="..\:/Users/Gham/AndroidStudioProjects/Placemark-00/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/programming/comp-sci/Android App Development/Placemark/Placemark-00/app/src/main/res/layout/activity_placemark.xml" value="0.2692502532928065" />
+        <entry key="..\:/programming/comp-sci/Android App Development/Placemark/Placemark/app/src/main/res/layout/activity_map.xml" value="0.1" />
+        <entry key="..\:/programming/comp-sci/Android App Development/Placemark/Placemark/app/src/main/res/layout/activity_placemark.xml" value="0.15121580547112462" />
+        <entry key="..\:/programming/comp-sci/Android App Development/Placemark/Placemark/app/src/main/res/layout/activity_placemark_list.xml" value="0.16111111111111112" />
+        <entry key="..\:/programming/comp-sci/Android App Development/Placemark/Placemark/app/src/main/res/layout/card_placemark.xml" value="0.33" />
+        <entry key="..\:/programming/comp-sci/Android App Development/Placemark/Placemark/app/src/main/res/layout/menu_placemark.xml" value="0.14722222222222223" />
+        <entry key="..\:/programming/comp-sci/Android App Development/Placemark/Placemark/app/src/main/res/menu/main_menu.xml" value="0.2037037037037037" />
+        <entry key="..\:/programming/comp-sci/Android App Development/Placemark/Placemark/app/src/main/res/menu/menu_placemark.xml" value="0.14722222222222223" />
+        <entry key="..\:/programming/comp-sci/Android App Development/Placemark/Stable/PlacemarkStable-V6/app/src/main/res/layout/activity_burn.xml" value="0.2695035460992908" />
+        <entry key="..\:/programming/comp-sci/Android App Development/Placemark/Stable/PlacemarkStable-V6/app/src/main/res/layout/activity_placemark.xml" value="0.2695035460992908" />
+        <entry key="..\:/programming/comp-sci/Android App Development/Placemark/Stable/PlacemarkStable-V6/app/src/main/res/layout/card_burn.xml" value="0.2695035460992908" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
