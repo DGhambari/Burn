@@ -1,8 +1,7 @@
-package org.wit.burn.main
+package burn.main
 
 import android.app.Application
-import org.wit.burn.models.BurnMemStore
-import org.wit.burn.models.BurnModel
+import burn.models.BurnMemStore
 import timber.log.Timber
 import timber.log.Timber.i
 

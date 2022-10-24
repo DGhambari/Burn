@@ -1,4 +1,4 @@
-package org.wit.burn.activities
+package burn.activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,10 +8,10 @@ import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import org.wit.burn.adapters.BurnAdapter
-import org.wit.burn.adapters.BurnListener
-import org.wit.burn.main.MainApp
-import org.wit.burn.models.BurnModel
+import burn.adapters.BurnAdapter
+import burn.adapters.BurnListener
+import burn.main.MainApp
+import burn.models.BurnModel
 import org.wit.burn.R
 import org.wit.burn.databinding.ActivityBurnListBinding
 

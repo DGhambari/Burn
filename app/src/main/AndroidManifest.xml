@@ -5,7 +5,7 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
-        android:name=".main.MainApp"
+        android:name="burn.main.MainApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -18,11 +18,11 @@
             android:value="${MAPS_API_KEY}" />
 
         <activity
-            android:name=".activities.MapActivity"
+            android:name="burn.activities.MapActivity"
             android:exported="false"
             android:label="@string/title_activity_map" />
         <activity
-            android:name=".activities.BurnListActivity"
+            android:name="burn.activities.BurnListActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,7 +30,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.BurnActivity"></activity>
+        <activity android:name="burn.activities.BurnActivity"></activity>
     </application>
 
 </manifest>

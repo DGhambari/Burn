@@ -1,4 +1,4 @@
-package org.wit.burn.helpers
+package burn.helpers
 
 import android.content.Intent
 import androidx.activity.result.ActivityResultLauncher

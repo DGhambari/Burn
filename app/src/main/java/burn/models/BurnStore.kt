@@ -1,4 +1,4 @@
-package org.wit.burn.models
+package burn.models
 
 interface BurnStore {
     fun findAll(): List<BurnModel>
