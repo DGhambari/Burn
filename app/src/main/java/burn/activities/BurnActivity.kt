@@ -31,6 +31,7 @@ class BurnActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         var edit = false
+        var delete = false
 
         binding = ActivityBurnBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -46,12 +47,14 @@ class BurnActivity : AppCompatActivity() {
             burn = intent.extras?.getParcelable("burn_edit")!!
             binding.burnTitle.setText(burn.title)
             binding.description.setText(burn.description)
+//            binding.latitude.setText(burn.latitude)
+//            binding.longitude.setText(burn.longitude)
             binding.btnAdd.setText(R.string.save_location)
             Picasso.get()
                 .load(burn.image)
                 .into(binding.burnImage)
             if (burn.image != Uri.EMPTY) {
-                binding.chooseImage.setText(R.string.change_location_image)
+                binding.chooseImage.setText(R.string.change_route_image)
             }
         }
 
@@ -59,7 +62,7 @@ class BurnActivity : AppCompatActivity() {
             burn.title = binding.burnTitle.text.toString()
             burn.description = binding.description.text.toString()
             if (burn.title.isEmpty()) {
-                Snackbar.make(it,R.string.enter_location_title, Snackbar.LENGTH_LONG)
+                Snackbar.make(it,R.string.enter_route_title, Snackbar.LENGTH_LONG)
                     .show()
             } else {
                 if (edit) {
@@ -114,7 +117,7 @@ class BurnActivity : AppCompatActivity() {
                             Picasso.get()
                                 .load(burn.image)
                                 .into(binding.burnImage)
-                            binding.chooseImage.setText(R.string.change_location_image)
+                            binding.chooseImage.setText(R.string.change_route_image)
                         } // end of if
                     }
                     RESULT_CANCELED -> { } else -> { }

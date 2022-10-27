@@ -1,15 +1,19 @@
 <resources>
     <string name="app_name">Burn</string>
-    <string name="button_addLocation">Add Location</string>
-    <string name="hint_locationTitle">Location Title</string>
+    <string name="button_addRoute">Add Route</string>
+    <string name="hint_routeName">Route Name</string>
     <string name="hint_locationDescription">Description </string>
-    <string name="menu_addLocation">Add</string>
+    <string name="menu_addRoute">Add</string>
     <string name="menu_cancelLocation">Cancel</string>
-    <string name="enter_location_title"> Please enter a Location Title </string>
+    <string name="enter_route_title"> Please enter a Route Title </string>
     <string name="save_location"> Save Location </string>
     <string name="button_addImage"> Add Image </string>
-    <string name="select_location_image">Select location image</string>
-    <string name="change_location_image">Change location image</string>
+    <string name="select_route_image">Select route image</string>
+    <string name="change_route_image">Change route image</string>
     <string name="button_location">Set Map Location</string>
     <string name="title_activity_map">MapActivity</string>
+    <string name="enter_route_latitude">Latitude</string>
+    <string name="enter_route_longitude">Longitude</string>
+    <string name="login">Sign In</string>
+    <string name="logout">Sign Out</string>
 </resources>

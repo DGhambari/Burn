@@ -3,8 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:id="@+id/login"
+        android:title="@string/login"
+        app:showAsAction="always" />
+    <item
         android:id="@+id/item_add"
         android:icon="@android:drawable/ic_menu_add"
-        android:title="@string/menu_addLocation"
+        android:title="@string/menu_addRoute"
         app:showAsAction="always" />
+
 </menu>

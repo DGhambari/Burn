@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import burn.models.BurnModel
-import org.wit.burn.databinding.CardBurnBinding
+import org.wit.burn.databinding.CardViewBinding
 
 interface BurnListener {
     fun onBurnClick(burn: BurnModel)
@@ -16,7 +16,7 @@ class BurnAdapter constructor(private var burns: List<BurnModel>,
     RecyclerView.Adapter<BurnAdapter.MainHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainHolder {
-        val binding = CardBurnBinding
+        val binding = CardViewBinding
             .inflate(LayoutInflater.from(parent.context), parent, false)
 
         return MainHolder(binding)
@@ -29,7 +29,7 @@ class BurnAdapter constructor(private var burns: List<BurnModel>,
 
     override fun getItemCount(): Int = burns.size
 
-    class MainHolder(private val binding : CardBurnBinding) :
+    class MainHolder(private val binding : CardViewBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(burn: BurnModel, listener: BurnListener) {

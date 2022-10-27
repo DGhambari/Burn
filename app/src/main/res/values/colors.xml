@@ -9,6 +9,11 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="colorPrimary">#FFFFFF</color>
-    <color name="colorPrimaryDark">#000000</color>
-    <color name="colorAccent">#4c90af</color>
+    <color name="colorPrimaryDark">#160F1B</color>
+    <color name="colorAccent">#9F66E6</color>
+    <color name="colorTextbox">#501380</color>
+    <color name="colorCard">#E8E1DF</color>
+
+    <color name="dark_purple">#1A0629</color>
+    <color name="light_dark_purple">#302143</color>
 </resources>
