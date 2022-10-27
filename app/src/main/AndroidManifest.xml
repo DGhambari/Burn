@@ -5,25 +5,36 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
-        android:name="burn.main.MainApp"
+        android:name=".main.MainApp"
         android:allowBackup="true"
+        android:fontFamily="@font/suissnord"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:fontFamily="@font/suissnord"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Burn">
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.login.LoginActivity2"
+            android:exported="false"
+            android:label="@string/title_activity_login2" />
+        <activity
+            android:name=".ui.login.FirebaseLoginActivity"
+            android:exported="false"
+            android:label="@string/title_activity_firebase_login" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="${MAPS_API_KEY}" />
 
         <activity
-            android:name="burn.activities.MapActivity"
+            android:name=".activities.MapActivity"
             android:exported="false"
             android:label="@string/title_activity_map" />
         <activity
-            android:name="burn.activities.BurnListActivity"
+            android:name=".activities.RegisterActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,7 +42,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="burn.activities.BurnActivity"></activity>
+        <activity android:name=".activities.BurnActivity" />
     </application>
 
 </manifest>

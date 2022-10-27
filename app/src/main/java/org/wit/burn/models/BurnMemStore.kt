@@ -1,4 +1,4 @@
-package burn.models
+package org.wit.burn.models
 
 import timber.log.Timber.i
 

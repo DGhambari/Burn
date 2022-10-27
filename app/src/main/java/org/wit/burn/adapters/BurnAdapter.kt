@@ -1,10 +1,10 @@
-package burn.adapters
+package org.wit.burn.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
-import burn.models.BurnModel
+import org.wit.burn.models.BurnModel
 import org.wit.burn.databinding.CardViewBinding
 
 interface BurnListener {

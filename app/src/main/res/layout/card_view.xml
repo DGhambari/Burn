@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:padding="16dp"
         android:orientation="vertical"
-        android:background="@color/colorCard">
+        android:background="@color/color_card">
 
         <ImageView
             android:id="@+id/imageIcon"

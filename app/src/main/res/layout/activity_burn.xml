@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="burn.activities.BurnActivity">
+    tools:context=".activities.BurnActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -17,7 +17,7 @@
             android:id="@+id/appBarLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorAccent"
+            android:background="@color/color_accent"
             android:fitsSystemWindows="true"
             app:elevation="0dip"
             app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
@@ -26,7 +26,7 @@
                 android:id="@+id/toolbarAdd"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:titleTextColor="@color/colorPrimary" />
+                app:titleTextColor="@color/color_primary" />
         </com.google.android.material.appbar.AppBarLayout>
 
         <ScrollView
@@ -43,15 +43,15 @@
                 <EditText
                     android:id="@+id/burnTitle"
                     android:layout_width="match_parent"
-                    android:layout_height="45dp"
+                    android:layout_height="48dp"
                     android:layout_margin="8dp"
-                    android:autofillHints=""
+                    android:autofillHints="@string/hint_route_name"
                     android:hint="@string/hint_routeName"
                     android:inputType="text"
                     android:maxLength="25"
                     android:maxLines="1"
                     android:padding="8dp"
-                    android:textColor="@color/colorPrimaryDark"
+                    android:textColor="@color/color_primary_dark"
                     android:textSize="14sp" />
 
                 <EditText
@@ -59,12 +59,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
+                    android:autofillHints=""
                     android:hint="@string/hint_locationDescription"
                     android:inputType="text"
-                    android:maxLength="25"
-                    android:maxLines="1"
+                    android:maxLength="300"
+                    android:maxLines="10"
+                    android:minHeight="48dp"
                     android:padding="8dp"
-                    android:textColor="@color/colorPrimaryDark"
+                    android:textColor="@color/color_primary_dark"
                     android:textSize="14sp" />
 
                 <Button
@@ -72,11 +74,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
-                    android:background="@color/colorAccent"
+                    android:background="@drawable/text_input_rounding"
                     android:paddingBottom="8dp"
                     android:paddingTop="8dp"
                     android:text="@string/button_addImage"
-                    android:textColor="@color/colorPrimary"
+                    android:textColor="@color/color_primary"
                     android:textSize="16sp"/>
 
                 <Button
@@ -84,31 +86,31 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
-                    android:background="@color/colorAccent"
+                    android:background="@drawable/text_input_rounding"
                     android:paddingBottom="8dp"
                     android:paddingTop="8dp"
-                    android:stateListAnimator="@null"
+                    android:stateListAnimator="@string/login_logo"
                     android:text="@string/button_location"
-                    android:textColor="@color/colorPrimary"
+                    android:textColor="@color/color_primary"
                     android:textSize="16sp"/>
 
                 <ImageView
                     android:id="@+id/burnImage"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@mipmap/ic_launcher"/>
+                    app:srcCompat="@mipmap/ic_launcher" />
 
                 <Button
                     android:id="@+id/btnAdd"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
-                    android:background="@color/colorAccent"
+                    android:background="@drawable/text_input_rounding"
                     android:paddingTop="8dp"
                     android:paddingBottom="8dp"
-                    android:stateListAnimator="@null"
+                    android:stateListAnimator="@/string/login_logo"
                     android:text="@string/button_addRoute"
-                    android:textColor="@color/colorPrimary"
+                    android:textColor="@color/color_primary"
                     android:textSize="16sp" />
             </LinearLayout>
         </ScrollView>

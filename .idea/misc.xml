@@ -9,10 +9,16 @@
         <entry key="..\:/programming/comp-sci/Android App Development/Burn-V2/app/src/main/res/drawable/background_colour.xml" value="0.4155" />
         <entry key="..\:/programming/comp-sci/Android App Development/Burn-V2/app/src/main/res/drawable/login_edit_background.xml" value="0.433" />
         <entry key="..\:/programming/comp-sci/Android App Development/Burn-V2/app/src/main/res/font/fonts.xml" value="0.17685185185185184" />
-        <entry key="..\:/programming/comp-sci/Android App Development/Burn-V2/app/src/main/res/layout/activity_burn.xml" value="0.33" />
+        <entry key="..\:/programming/comp-sci/Android App Development/Burn-V2/app/src/main/res/layout-w1240dp/activity_login.xml" value="0.29417670682730923" />
+        <entry key="..\:/programming/comp-sci/Android App Development/Burn-V2/app/src/main/res/layout-w936dp/activity_login.xml" value="0.343359375" />
+        <entry key="..\:/programming/comp-sci/Android App Development/Burn-V2/app/src/main/res/layout/activity_burn.xml" value="0.5" />
         <entry key="..\:/programming/comp-sci/Android App Development/Burn-V2/app/src/main/res/layout/activity_burn_list.xml" value="0.24822695035460993" />
+        <entry key="..\:/programming/comp-sci/Android App Development/Burn-V2/app/src/main/res/layout/activity_firebase_login.xml" value="0.4578125" />
+        <entry key="..\:/programming/comp-sci/Android App Development/Burn-V2/app/src/main/res/layout/activity_login.xml" value="0.4578125" />
         <entry key="..\:/programming/comp-sci/Android App Development/Burn-V2/app/src/main/res/layout/activity_map.xml" value="0.24822695035460993" />
+        <entry key="..\:/programming/comp-sci/Android App Development/Burn-V2/app/src/main/res/layout/activity_register.xml" value="0.4578125" />
         <entry key="..\:/programming/comp-sci/Android App Development/Burn-V2/app/src/main/res/layout/card_burn.xml" value="0.26975683890577506" />
+        <entry key="..\:/programming/comp-sci/Android App Development/Burn-V2/app/src/main/res/layout/card_view.xml" value="0.2604166666666667" />
         <entry key="..\:/programming/comp-sci/Android App Development/Burn-V2/app/src/main/res/layout/login.xml" value="0.33" />
         <entry key="..\:/programming/comp-sci/Android App Development/Burn-V2/app/src/main/res/layout/login_view.xml" value="0.33" />
         <entry key="..\:/programming/comp-sci/Android App Development/Burn-V2/app/src/main/res/layout/register.xml" value="0.33" />

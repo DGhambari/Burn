@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@drawable/burn_background2"
+tools:context=".activities.RegisterActivity">
+
+<ImageView
+    android:id="@+id/imageView"
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    android:contentDescription="@string/login_logo"
+    android:src="@drawable/icons8_login2_64"
+    app:layout_constraintBottom_toTopOf="@+id/registerTitle"
+    app:layout_constraintEnd_toEndOf="@+id/registerTitle"
+    app:layout_constraintHorizontal_bias="0.505"
+    app:layout_constraintStart_toStartOf="@+id/registerTitle"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.913" />
+
+<TextView
+    android:id="@+id/registerTitle"
+    android:layout_width="256dp"
+    android:layout_height="64dp"
+    android:layout_marginTop="196dp"
+    android:gravity="center"
+    android:text="@string/app_name"
+    android:textColor="@color/color_primary"
+    android:textSize="55sp"
+    app:fontFamily="@font/suissnord"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.496"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<TextView
+    android:id="@+id/textRegister"
+    android:layout_width="150dp"
+    android:layout_height="40dp"
+    android:layout_marginTop="260dp"
+    android:gravity="center"
+    android:text="@string/register"
+    android:textColor="@color/color_primary"
+    android:textSize="22sp"
+    app:fontFamily="sans-serif"
+    app:layout_constraintEnd_toEndOf="@+id/registerUsername"
+    app:layout_constraintHorizontal_bias="0.496"
+    app:layout_constraintStart_toStartOf="@+id/registerUsername"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<EditText
+    android:id="@+id/registerUsername"
+    android:layout_width="309dp"
+    android:layout_height="48dp"
+    android:layout_marginTop="20dp"
+    android:background="@drawable/text_input_rounding"
+    android:hint="@string/hint_email"
+    android:minHeight="48dp"
+    android:padding="10dp"
+    android:textColor="#757575"
+    android:textColorHint="#757575"
+    android:inputType="textEmailAddress"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textRegister"
+    android:autofillHints="joe.smith@email.com" />
+
+<EditText
+    android:id="@+id/registerPassword"
+    android:layout_width="309dp"
+    android:layout_height="48dp"
+    android:layout_marginTop="20dp"
+    android:background="@drawable/text_input_rounding"
+    android:hint="@string/hint_password"
+    android:minHeight="48dp"
+    android:padding="10dp"
+    android:textColor="#757575"
+    android:textColorHint="#757575"
+    android:inputType="textPassword"
+    app:layout_constraintEnd_toEndOf="@+id/registerUsername"
+    app:layout_constraintHorizontal_bias="1.0"
+    app:layout_constraintStart_toStartOf="@+id/registerUsername"
+    app:layout_constraintTop_toBottomOf="@+id/registerUsername"
+    android:importantForAutofill="no" />
+
+<TextView
+    android:id="@+id/forgotPassword"
+    android:layout_width="wrap_content"
+    android:layout_height="20dp"
+    android:layout_marginBottom="24dp"
+    android:gravity="right"
+    android:text="@string/login_forgot_password"
+    android:textColor="@color/color_primary"
+    android:textSize="14sp"
+    app:layout_constraintBottom_toTopOf="@+id/btnRegister"
+    app:layout_constraintEnd_toEndOf="@+id/registerPassword"
+    app:layout_constraintHorizontal_bias="1.0"
+    app:layout_constraintStart_toStartOf="@+id/registerPassword" />
+
+<Button
+    android:id="@+id/btnRegister"
+    android:layout_width="149dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="52dp"
+    android:background="@drawable/text_input_rounding"
+    android:text="@string/register"
+    android:textSize="18sp"
+    android:textStyle="bold"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/registerPassword"
+    tools:ignore="DuplicateSpeakableTextCheck" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

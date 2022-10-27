@@ -8,12 +8,13 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="colorPrimary">#FFFFFF</color>
-    <color name="colorPrimaryDark">#160F1B</color>
-    <color name="colorAccent">#9F66E6</color>
-    <color name="colorTextbox">#501380</color>
-    <color name="colorCard">#E8E1DF</color>
+    <color name="color_primary">#FFFFFF</color>
+    <color name="color_primary_dark">#160F1B</color>
+    <color name="color_accent">#9F66E6</color>
+    <color name="color_textbox">#501380</color>
+    <color name="color_card">#E8E1DF</color>
 
     <color name="dark_purple">#1A0629</color>
     <color name="light_dark_purple">#302143</color>
+    <color name="text_colour">#757575</color>
 </resources>

@@ -12,8 +12,36 @@
     <string name="change_route_image">Change route image</string>
     <string name="button_location">Set Map Location</string>
     <string name="title_activity_map">MapActivity</string>
+    <string name="title_login">LoginActivity</string>
     <string name="enter_route_latitude">Latitude</string>
     <string name="enter_route_longitude">Longitude</string>
-    <string name="login">Sign In</string>
-    <string name="logout">Sign Out</string>
+
+    <string name="login">Log In</string>
+    <string name="logout">Log Out</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="login_forgot_password">Forgot Password?</string>
+    <string name="register">Register</string>
+    <string name="enter_username">Please enter a Username</string>
+    <string name="enter_password">Please enter a Password</string>
+    <string name="success">Welcome!</string>
+
+    <string name="login_logo">login_logo</string>
+    <string name="hint_route_name">Molls Gap, Kerry</string>
+    <string name="hint_route_description">Moll\'s Gap or Céim an Daimh
+        (meaning, Gap of the Ox), is a mountain pass on the N71 road from Kenmare to Killarney in
+        Kerry, Ireland. Moll\'s Gap is on the Ring of Kerry route, and offers views of the
+        MacGillycuddy\'s Reeks mountains, and is a popular tourist location.</string>
+
+    <string name="title_activity_login2">LoginActivity2</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="title_activity_firebase_login">FirebaseLoginActivity</string>
+
 </resources>

@@ -1,4 +1,4 @@
-package burn.activities
+package org.wit.burn.activities
 
 import android.content.Intent
 import android.net.Uri
@@ -10,10 +10,10 @@ import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import com.google.android.material.snackbar.Snackbar
 import com.squareup.picasso.Picasso
-import burn.helpers.showImagePicker
-import burn.main.MainApp
-import burn.models.Location
-import burn.models.BurnModel
+import org.wit.burn.helpers.showImagePicker
+import org.wit.burn.main.MainApp
+import org.wit.burn.models.Location
+import org.wit.burn.models.BurnModel
 import org.wit.burn.R
 import org.wit.burn.databinding.ActivityBurnBinding
 import timber.log.Timber.i
@@ -32,6 +32,8 @@ class BurnActivity : AppCompatActivity() {
 
         var edit = false
         var delete = false
+        val userId = intent.getStringExtra("user_id")
+        val emailId = intent.getStringExtra("email_id")
 
         binding = ActivityBurnBinding.inflate(layoutInflater)
         setContentView(binding.root)

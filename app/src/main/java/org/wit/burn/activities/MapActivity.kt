@@ -1,4 +1,4 @@
-package burn.activities
+package org.wit.burn.activities
 
 import android.app.Activity
 import android.content.Intent
@@ -11,7 +11,7 @@ import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
-import burn.models.Location
+import org.wit.burn.models.Location
 import org.wit.burn.R
 
 class MapActivity : AppCompatActivity(), OnMapReadyCallback,
