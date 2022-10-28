@@ -27,9 +27,10 @@ class BurnMemStore : BurnStore {
         if (foundBurn != null) {
             foundBurn.title = burn.title
             foundBurn.description = burn.description
-//            foundBurn.latitude = burn.latitude
-//            foundBurn.longitude = burn.longitude
             foundBurn.image = burn.image
+            foundBurn.lat = burn.lat
+            foundBurn.lng = burn.lng
+            foundBurn.zoom = burn.zoom
             logAll()
         }
     }

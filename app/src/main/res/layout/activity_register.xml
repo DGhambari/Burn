@@ -85,34 +85,34 @@ tools:context=".activities.RegisterActivity">
     app:layout_constraintTop_toBottomOf="@+id/registerUsername"
     android:importantForAutofill="no" />
 
-<TextView
-    android:id="@+id/forgotPassword"
-    android:layout_width="wrap_content"
-    android:layout_height="20dp"
-    android:layout_marginBottom="24dp"
-    android:gravity="right"
-    android:text="@string/login_forgot_password"
-    android:textColor="@color/color_primary"
-    android:textSize="14sp"
-    app:layout_constraintBottom_toTopOf="@+id/btnRegister"
-    app:layout_constraintEnd_toEndOf="@+id/registerPassword"
-    app:layout_constraintHorizontal_bias="1.0"
-    app:layout_constraintStart_toStartOf="@+id/registerPassword" />
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="149dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/text_input_rounding"
+        android:text="@string/register"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registerPassword"
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
-<Button
-    android:id="@+id/btnRegister"
-    android:layout_width="149dp"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="52dp"
-    android:background="@drawable/text_input_rounding"
-    android:text="@string/register"
-    android:textSize="18sp"
-    android:textStyle="bold"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/registerPassword"
-    tools:ignore="DuplicateSpeakableTextCheck" />
-
+    <TextView
+        android:id="@+id/textRegisterBack"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Back"
+        android:textColor="@color/color_primary"
+        android:textSize="18sp"
+        app:fontFamily="sans-serif"
+        app:layout_constraintEnd_toEndOf="@+id/btnRegister"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btnRegister"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegister" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

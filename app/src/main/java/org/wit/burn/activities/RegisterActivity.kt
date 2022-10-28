@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.google.android.gms.tasks.OnCompleteListener
-import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -32,17 +31,24 @@ class RegisterActivity : AppCompatActivity() {
 
         Timber.i("Register Activity started...")
 
+        binding.textRegisterBack.setOnClickListener(){
+//            startActivity(Intent(this@RegisterActivity, ForgotPasswordActivity::class.java))
+            onBackPressed()
+        }
+
         binding.btnRegister.setOnClickListener() {
             register.username = binding.registerUsername.text.toString()
             register.password = binding.registerPassword.text.toString()
 
-            when{
+            when {
                 register.username.isEmpty() -> {
-                    Snackbar.make(it, R.string.enter_username, Snackbar.LENGTH_LONG)
+                    Toast.makeText(this@RegisterActivity,
+                        R.string.enter_username,
+                        Toast.LENGTH_SHORT)
                         .show()
                 }
                 register.password.isEmpty() -> {
-                    Snackbar.make(it, R.string.enter_password, Snackbar.LENGTH_LONG)
+                    Toast.makeText(this@RegisterActivity, R.string.enter_password, Toast.LENGTH_SHORT)
                         .show()
                 } else -> {
 
@@ -55,17 +61,17 @@ class RegisterActivity : AppCompatActivity() {
                             if (task.isSuccessful){
 
                              val firebaseUser: FirebaseUser = task.result!!.user!!
-                                Snackbar.make(
-                                    it,
+                                Toast.makeText(
+                                    this@RegisterActivity,
                                     R.string.success,
-                                    Snackbar.LENGTH_LONG
+                                    Toast.LENGTH_SHORT
                                 ).show()
                                 val intent =
                                     Intent(this@RegisterActivity, BurnActivity::class.java)
                                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                                 intent.putExtra("user_id", firebaseUser.uid)
                                 intent.putExtra("email_id", email)
-                                Snackbar.make(it, "Success!",Snackbar.LENGTH_LONG)
+                                Toast.makeText(this@RegisterActivity, "Success!",Toast.LENGTH_SHORT)
                                 startActivity(intent)
                                 finish()
                             } else {

@@ -43,5 +43,7 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="title_activity_firebase_login">FirebaseLoginActivity</string>
+    <string name="submit">Submit</string>
+    <string name="forgotPassword">Forgot Password?</string>
 
 </resources>

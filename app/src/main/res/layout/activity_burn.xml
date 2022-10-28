@@ -1,119 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.BurnActivity">
+    android:background="@drawable/burn_background2">
 
-    <RelativeLayout
+<!--    <TextView-->
+<!--        android:id="@+id/text_userEmail"-->
+<!--        android:layout_width="149dp"-->
+<!--        android:layout_height="26dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:text="TextView"-->
+<!--        android:textColor="@color/color_primary"-->
+<!--        android:textSize="14sp"-->
+<!--        app:fontFamily="sans-serif"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.076"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/text_logout"-->
+<!--        android:layout_width="118dp"-->
+<!--        android:layout_height="26dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:text="@string/logout"-->
+<!--        android:gravity="right"-->
+<!--        android:textColor="@color/color_primary"-->
+<!--        android:textSize="14sp"-->
+<!--        app:fontFamily="sans-serif"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.938"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <EditText
+        android:id="@+id/routeTitle"
+        android:layout_width="355dp"
+        android:layout_height="48dp"
+        android:layout_margin="8dp"
+        android:autofillHints=""
+        android:background="@drawable/text_input_rounding"
+        android:hint="@string/hint_routeName"
+        android:inputType="text"
+        android:maxLength="25"
+        android:maxLines="1"
+        android:padding="8dp"
+        android:textColor="#757575"
+        android:textColorHint="#757575"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.158" />
+
+    <EditText
+        android:id="@+id/description"
+        android:layout_width="356dp"
+        android:layout_height="48dp"
+        android:layout_margin="8dp"
+        android:layout_marginTop="36dp"
+        android:hint="@string/hint_locationDescription"
+        android:background="@drawable/text_input_rounding"
+        android:inputType="textMultiLine"
+        android:maxLength="30"
+        android:maxLines="1"
+        android:minHeight="48dp"
+        android:padding="8dp"
+        android:textColor="#757575"
+        android:textColorHint="#757575"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/routeTitle"
+        app:layout_constraintVertical_bias="0.033" />
+
+    <Button
+        android:id="@+id/chooseImage"
+        android:layout_width="296dp"
+        android:layout_height="48dp"
+        android:background="@drawable/text_input_rounding"
+        android:text="@string/button_addImage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description"
+        app:layout_constraintVertical_bias="0.077" />
+
+    <ImageView
+        android:id="@+id/routeImage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:maxHeight="400px"
+        android:minHeight="300px"
+        android:adjustViewBounds="true"
+        app:layout_constraintBottom_toTopOf="@+id/routeLocation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chooseImage"
+        app:layout_constraintVertical_bias="0.556"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <Button
+        android:id="@+id/routeLocation"
+        android:layout_width="296dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="180dp"
+        android:background="@drawable/text_input_rounding"
+        android:text="@string/button_location"
+        app:layout_constraintEnd_toEndOf="@+id/chooseImage"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/chooseImage"
+        app:layout_constraintTop_toBottomOf="@+id/chooseImage" />
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="296dp"
+        android:layout_height="48dp"
+        android:background="@drawable/text_input_rounding"
+        android:text="@string/button_addRoute"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintEnd_toEndOf="@+id/routeLocation"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/routeLocation"
+        app:layout_constraintTop_toBottomOf="@+id/routeLocation"
+        app:layout_constraintVertical_bias="0.187" />
 
-        <com.google.android.material.appbar.AppBarLayout
-            android:id="@+id/appBarLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/color_accent"
-            android:fitsSystemWindows="true"
-            app:elevation="0dip"
-            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
-
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbarAdd"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:titleTextColor="@color/color_primary" />
-        </com.google.android.material.appbar.AppBarLayout>
-
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@id/appBarLayout"
-            android:fillViewport="true">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <EditText
-                    android:id="@+id/burnTitle"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:layout_margin="8dp"
-                    android:autofillHints="@string/hint_route_name"
-                    android:hint="@string/hint_routeName"
-                    android:inputType="text"
-                    android:maxLength="25"
-                    android:maxLines="1"
-                    android:padding="8dp"
-                    android:textColor="@color/color_primary_dark"
-                    android:textSize="14sp" />
-
-                <EditText
-                    android:id="@+id/description"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    android:autofillHints=""
-                    android:hint="@string/hint_locationDescription"
-                    android:inputType="text"
-                    android:maxLength="300"
-                    android:maxLines="10"
-                    android:minHeight="48dp"
-                    android:padding="8dp"
-                    android:textColor="@color/color_primary_dark"
-                    android:textSize="14sp" />
-
-                <Button
-                    android:id="@+id/chooseImage"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:background="@drawable/text_input_rounding"
-                    android:paddingBottom="8dp"
-                    android:paddingTop="8dp"
-                    android:text="@string/button_addImage"
-                    android:textColor="@color/color_primary"
-                    android:textSize="16sp"/>
-
-                <Button
-                    android:id="@+id/burnLocation"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:background="@drawable/text_input_rounding"
-                    android:paddingBottom="8dp"
-                    android:paddingTop="8dp"
-                    android:stateListAnimator="@string/login_logo"
-                    android:text="@string/button_location"
-                    android:textColor="@color/color_primary"
-                    android:textSize="16sp"/>
-
-                <ImageView
-                    android:id="@+id/burnImage"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@mipmap/ic_launcher" />
-
-                <Button
-                    android:id="@+id/btnAdd"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:background="@drawable/text_input_rounding"
-                    android:paddingTop="8dp"
-                    android:paddingBottom="8dp"
-                    android:stateListAnimator="@/string/login_logo"
-                    android:text="@string/button_addRoute"
-                    android:textColor="@color/color_primary"
-                    android:textSize="16sp" />
-            </LinearLayout>
-        </ScrollView>
-
-    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

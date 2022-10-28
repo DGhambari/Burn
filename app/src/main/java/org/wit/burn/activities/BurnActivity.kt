@@ -9,6 +9,7 @@ import android.view.MenuItem
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import com.google.android.material.snackbar.Snackbar
+//import com.google.firebase.auth.FirebaseAuth
 import com.squareup.picasso.Picasso
 import org.wit.burn.helpers.showImagePicker
 import org.wit.burn.main.MainApp
@@ -23,7 +24,7 @@ class BurnActivity : AppCompatActivity() {
     private lateinit var binding: ActivityBurnBinding
     private lateinit var imageIntentLauncher : ActivityResultLauncher<Intent>
     private lateinit var mapIntentLauncher : ActivityResultLauncher<Intent>
-    var location = Location(52.245696, -7.139102, 15f)
+//    var location = Location(52.245696, -7.139102, 15f)
     var burn = BurnModel()
     lateinit var app: MainApp
 
@@ -32,13 +33,12 @@ class BurnActivity : AppCompatActivity() {
 
         var edit = false
         var delete = false
-        val userId = intent.getStringExtra("user_id")
-        val emailId = intent.getStringExtra("email_id")
+
 
         binding = ActivityBurnBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.toolbarAdd.title = title
-        setSupportActionBar(binding.toolbarAdd)
+//        binding.toolbarAdd.title = title
+//        setSupportActionBar(binding.toolbarAdd)
 
         app = application as MainApp
 
@@ -47,21 +47,21 @@ class BurnActivity : AppCompatActivity() {
         if (intent.hasExtra("burn_edit")) {
             edit = true
             burn = intent.extras?.getParcelable("burn_edit")!!
-            binding.burnTitle.setText(burn.title)
+            binding.routeTitle.setText(burn.title)
             binding.description.setText(burn.description)
 //            binding.latitude.setText(burn.latitude)
 //            binding.longitude.setText(burn.longitude)
             binding.btnAdd.setText(R.string.save_location)
             Picasso.get()
                 .load(burn.image)
-                .into(binding.burnImage)
+                .into(binding.routeImage)
             if (burn.image != Uri.EMPTY) {
                 binding.chooseImage.setText(R.string.change_route_image)
             }
         }
 
         binding.btnAdd.setOnClickListener() {
-            burn.title = binding.burnTitle.text.toString()
+            burn.title = binding.routeTitle.text.toString()
             burn.description = binding.description.text.toString()
             if (burn.title.isEmpty()) {
                 Snackbar.make(it,R.string.enter_route_title, Snackbar.LENGTH_LONG)
@@ -78,12 +78,26 @@ class BurnActivity : AppCompatActivity() {
             finish()
         }
 
+//        // Logout from app
+//        binding.btnLogout.setOnClickListener{
+//            FirebaseAuth.getInstance().signOut()
+//
+//            startActivity(Intent(this@BurnActivity, LoginActivity::class.java))
+//            finish()
+//        }
+
         binding.chooseImage.setOnClickListener {
             i("Select image")
             showImagePicker(imageIntentLauncher)
         }
 
-        binding.burnLocation.setOnClickListener {
+        binding.routeLocation.setOnClickListener {
+            val location = Location(52.245696, -7.139102, 15f)
+            if (burn.zoom !=0f) {
+                location.lat = burn.lat
+                location.lng = burn.lng
+                location.zoom = burn.zoom
+            }
             val launcherIntent = Intent(this, MapActivity::class.java)
                 .putExtra("location", location)
             mapIntentLauncher.launch(launcherIntent)
@@ -118,7 +132,7 @@ class BurnActivity : AppCompatActivity() {
                             burn.image = result.data!!.data!!
                             Picasso.get()
                                 .load(burn.image)
-                                .into(binding.burnImage)
+                                .into(binding.routeImage)
                             binding.chooseImage.setText(R.string.change_route_image)
                         } // end of if
                     }
@@ -135,8 +149,11 @@ class BurnActivity : AppCompatActivity() {
                     RESULT_OK -> {
                         if (result.data != null) {
                             i("Got Location ${result.data.toString()}")
-                            location = result.data!!.extras?.getParcelable("location")!!
+                            val location = result.data!!.extras?.getParcelable<Location>("location")!!
                             i("Location == $location")
+                            burn.lat = location.lat
+                            burn.lng = location.lng
+                            burn.zoom =location.zoom
                         } // end of if
                     }
                     RESULT_CANCELED -> { } else -> { }

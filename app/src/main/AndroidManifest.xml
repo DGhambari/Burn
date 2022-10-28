@@ -13,17 +13,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Burn">
+
         <activity
-            android:name=".RegisterActivity"
+            android:name=".activities.ForgotPasswordActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.login.LoginActivity2"
-            android:exported="false"
-            android:label="@string/title_activity_login2" />
-        <activity
-            android:name=".ui.login.FirebaseLoginActivity"
-            android:exported="false"
-            android:label="@string/title_activity_firebase_login" />
+            android:name=".activities.BurnListActivity"
+            android:exported="false" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -35,6 +31,9 @@
             android:label="@string/title_activity_map" />
         <activity
             android:name=".activities.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.BurnActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -42,7 +41,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.BurnActivity" />
+        <activity android:name=".activities.LoginActivity" />
     </application>
 
 </manifest>
