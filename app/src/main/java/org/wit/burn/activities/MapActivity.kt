@@ -34,7 +34,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback,
         map = googleMap
         val loc = LatLng(location.lat, location.lng)
         val options = MarkerOptions()
-            .title("Burn")
+            .title("Route Name")
             .snippet("GPS : $loc")
             .draggable(true)
             .position(loc)
@@ -42,8 +42,8 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback,
         map.addMarker(options)
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(loc, location.zoom))
         map.setOnMarkerDragListener(this)
-//        map.uiSettings.isZoomGesturesEnabled = true;
-//        map.uiSettings.isRotateGesturesEnabled = true;
+        map.uiSettings.isZoomGesturesEnabled = true;
+        map.uiSettings.isRotateGesturesEnabled = true;
     }
 
     override fun onMarkerDragStart(marker: Marker) {

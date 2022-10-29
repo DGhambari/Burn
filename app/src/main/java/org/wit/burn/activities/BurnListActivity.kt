@@ -32,7 +32,8 @@ class BurnListActivity : AppCompatActivity(), BurnListener {
 
         val layoutManager = LinearLayoutManager(this)
         binding.recyclerView.layoutManager = layoutManager
-        binding.recyclerView.adapter = BurnAdapter(app.burns.findAll(),this)
+//        binding.recyclerView.adapter = BurnAdapter(app.burns.findAll(),this)
+        loadBurns()
 
         registerRefreshCallback()
     }
@@ -61,6 +62,16 @@ class BurnListActivity : AppCompatActivity(), BurnListener {
     private fun registerRefreshCallback() {
         refreshIntentLauncher =
             registerForActivityResult(ActivityResultContracts.StartActivityForResult())
-            { binding.recyclerView.adapter?.notifyDataSetChanged() }
+//            { binding.recyclerView.adapter?.notifyDataSetChanged() }
+            { loadBurns() }
+    }
+
+    private fun loadBurns() {
+        showBurns(app.burns.findAll())
+    }
+
+    fun showBurns (burns: List<BurnModel>) {
+        binding.recyclerView.adapter = BurnAdapter(burns, this)
+        binding.recyclerView.adapter?.notifyDataSetChanged()
     }
 }

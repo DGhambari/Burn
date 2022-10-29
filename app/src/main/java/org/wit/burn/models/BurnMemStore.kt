@@ -38,4 +38,8 @@ class BurnMemStore : BurnStore {
     private fun logAll() {
         burns.forEach { i("$it") }
     }
+
+    override fun delete(burn: BurnModel) {
+        burns.remove(burn)
+    }
 }

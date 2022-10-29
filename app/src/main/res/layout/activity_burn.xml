@@ -6,34 +6,34 @@
     android:layout_height="match_parent"
     android:background="@drawable/burn_background2">
 
-<!--    <TextView-->
-<!--        android:id="@+id/text_userEmail"-->
-<!--        android:layout_width="149dp"-->
-<!--        android:layout_height="26dp"-->
-<!--        android:layout_marginTop="16dp"-->
-<!--        android:text="TextView"-->
-<!--        android:textColor="@color/color_primary"-->
-<!--        android:textSize="14sp"-->
-<!--        app:fontFamily="sans-serif"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.076"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
+    <TextView
+        android:id="@+id/text_userEmail"
+        android:layout_width="149dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="16dp"
+        android:text="user@email.com"
+        android:textColor="@color/color_primary"
+        android:textSize="18sp"
+        app:fontFamily="sans-serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.076"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-<!--    <TextView-->
-<!--        android:id="@+id/text_logout"-->
-<!--        android:layout_width="118dp"-->
-<!--        android:layout_height="26dp"-->
-<!--        android:layout_marginTop="16dp"-->
-<!--        android:text="@string/logout"-->
-<!--        android:gravity="right"-->
-<!--        android:textColor="@color/color_primary"-->
-<!--        android:textSize="14sp"-->
-<!--        app:fontFamily="sans-serif"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.938"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
+    <TextView
+        android:id="@+id/text_logout"
+        android:layout_width="118dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/logout"
+        android:gravity="right"
+        android:textColor="@color/color_primary"
+        android:textSize="18sp"
+        app:fontFamily="sans-serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.938"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/routeTitle"
@@ -96,20 +96,20 @@
         android:id="@+id/routeImage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
         android:maxHeight="400px"
         android:minHeight="300px"
-        android:adjustViewBounds="true"
         app:layout_constraintBottom_toTopOf="@+id/routeLocation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/chooseImage"
-        app:layout_constraintVertical_bias="0.556"
+        app:layout_constraintVertical_bias="0.527"
         app:srcCompat="@mipmap/ic_launcher" />
 
     <Button
         android:id="@+id/routeLocation"
         android:layout_width="296dp"
         android:layout_height="48dp"
-        android:layout_marginTop="180dp"
+        android:layout_marginTop="188dp"
         android:background="@drawable/text_input_rounding"
         android:text="@string/button_location"
         app:layout_constraintEnd_toEndOf="@+id/chooseImage"
