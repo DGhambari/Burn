@@ -16,6 +16,11 @@ class BurnMemStore : BurnStore {
         return burns
     }
 
+    override fun findById(id:Long) : BurnModel? {
+        val foundBurn: BurnModel? = burns.find { it.id == id }
+        return foundBurn
+    }
+
     override fun create(burn: BurnModel) {
         burn.id = getId()
         burns.add(burn)

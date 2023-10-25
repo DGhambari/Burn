@@ -41,7 +41,22 @@ class BurnJSONStore(private val context: Context) : BurnStore {
     }
 
     override fun update(burn: BurnModel) {
-        // todo
+        val burnsList = findAll() as ArrayList<BurnModel>
+        var foundBurn: BurnModel? = burnsList.find { p -> p.id == burn.id }
+        if (foundBurn != null) {
+            foundBurn.title = burn.title
+            foundBurn.description = burn.description
+            foundBurn.image = burn.image
+            foundBurn.lat = burn.lat
+            foundBurn.lng = burn.lng
+            foundBurn.zoom = burn.zoom
+        }
+        serialize()
+    }
+
+    override fun findById(id: Long): BurnModel? {
+        val foundBurn: BurnModel? = burns.find { it.id == id }
+        return foundBurn
     }
 
     private fun serialize() {

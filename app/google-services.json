@@ -1,44 +1,26 @@
 {
   "project_info": {
-    "project_number": "542851244873",
-    "project_id": "burn-c2e2e",
-    "storage_bucket": "burn-c2e2e.appspot.com"
+    "project_number": "674335218561",
+    "project_id": "burn-69dd9",
+    "storage_bucket": "burn-69dd9.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:542851244873:android:838adff2c4133131b13098",
+        "mobilesdk_app_id": "1:674335218561:android:f07c53aa640f84b07da680",
         "android_client_info": {
           "package_name": "org.wit.burn"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "542851244873-9laser47lafcbnsn8jna7m1qqgv6dslm.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "org.wit.burn",
-            "certificate_hash": "000bb164e46853967d9d38457e356be6b7686fcc"
-          }
-        },
-        {
-          "client_id": "542851244873-ceiqmskmssque3q1t9mooqveki6asfgv.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBZh-qB8sGDwwLie03jvOl0Pm42Pf6BVaw"
+          "current_key": "AIzaSyBn8IiJrlAqZZbJv30NOQ7-BePsbEeXHwQ"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "542851244873-ceiqmskmssque3q1t9mooqveki6asfgv.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }

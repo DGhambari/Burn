@@ -24,7 +24,8 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback,
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_map)
-        location = intent.extras?.getParcelable<Location>("location")!!
+        location = intent.extras?.getParcelable<Location>("location") ?: Location()
+
         val mapFragment = supportFragmentManager
             .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
@@ -42,8 +43,8 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback,
         map.addMarker(options)
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(loc, location.zoom))
         map.setOnMarkerDragListener(this)
-        map.uiSettings.isZoomGesturesEnabled = true;
-        map.uiSettings.isRotateGesturesEnabled = true;
+        map.uiSettings.isZoomGesturesEnabled = true
+        map.uiSettings.isRotateGesturesEnabled = true
     }
 
     override fun onMarkerDragStart(marker: Marker) {

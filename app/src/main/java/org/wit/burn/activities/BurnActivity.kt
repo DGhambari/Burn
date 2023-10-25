@@ -34,7 +34,6 @@ class BurnActivity : AppCompatActivity() {
         var edit = false
         var delete = false
 
-
         binding = ActivityBurnBinding.inflate(layoutInflater)
         setContentView(binding.root)
 //        binding.toolbarAdd.title = title
@@ -65,7 +64,7 @@ class BurnActivity : AppCompatActivity() {
             burn.description = binding.description.text.toString()
             if (burn.title.isEmpty()) {
                 Snackbar.make(it,R.string.enter_route_title, Snackbar.LENGTH_LONG)
-                    .show()
+                    .show() 
             } else {
                 if (edit) {
                     app.burns.update(burn.copy())
@@ -75,6 +74,9 @@ class BurnActivity : AppCompatActivity() {
             }
             i("add Button Pressed: $burn")
             setResult(RESULT_OK)
+
+            val intent = Intent(this@BurnActivity, BurnListActivity::class.java)
+            startActivity(intent)
             finish()
         }
 
