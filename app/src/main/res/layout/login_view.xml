@@ -44,13 +44,13 @@
         android:textColor="@color/color_primary"
         android:textSize="22sp"
         app:fontFamily="sans-serif"
-        app:layout_constraintEnd_toEndOf="@+id/loginUsername"
+        app:layout_constraintEnd_toEndOf="@+id/loginEmail"
         app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="@+id/loginUsername"
+        app:layout_constraintStart_toStartOf="@+id/loginEmail"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/loginUsername"
+        android:id="@+id/loginEmail"
         android:layout_width="309dp"
         android:layout_height="48dp"
         android:layout_marginTop="20dp"
@@ -78,10 +78,10 @@
         android:textColor="#757575"
         android:textColorHint="#757575"
         android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="@+id/loginUsername"
+        app:layout_constraintEnd_toEndOf="@+id/loginEmail"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/loginUsername"
-        app:layout_constraintTop_toBottomOf="@+id/loginUsername"
+        app:layout_constraintStart_toStartOf="@+id/loginEmail"
+        app:layout_constraintTop_toBottomOf="@+id/loginEmail"
         android:importantForAutofill="no" />
 
     <TextView

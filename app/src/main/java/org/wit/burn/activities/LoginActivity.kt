@@ -41,7 +41,7 @@ class LoginActivity : AppCompatActivity() {
         }
 
         binding.btnLogin.setOnClickListener() {
-            login.username = binding.loginUsername.text.toString()
+            login.username = binding.loginEmail.text.toString()
             login.password = binding.loginPassword.text.toString()
 
             when {

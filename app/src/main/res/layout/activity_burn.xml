@@ -6,37 +6,8 @@
     android:layout_height="match_parent"
     android:background="@drawable/burn_background2">
 
-    <TextView
-        android:id="@+id/text_userEmail"
-        android:layout_width="149dp"
-        android:layout_height="26dp"
-        android:layout_marginTop="16dp"
-        android:text="user@email.com"
-        android:textColor="@color/color_primary"
-        android:textSize="18sp"
-        app:fontFamily="sans-serif"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.076"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/text_logout"
-        android:layout_width="118dp"
-        android:layout_height="26dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/logout"
-        android:gravity="right"
-        android:textColor="@color/color_primary"
-        android:textSize="18sp"
-        app:fontFamily="sans-serif"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.938"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <EditText
-        android:id="@+id/routeTitle"
+        android:id="@+id/routeName"
         android:layout_width="355dp"
         android:layout_height="48dp"
         android:layout_margin="8dp"
@@ -54,30 +25,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.158" />
-
-    <EditText
-        android:id="@+id/description"
-        android:layout_width="356dp"
-        android:layout_height="48dp"
-        android:layout_margin="8dp"
-        android:layout_marginTop="36dp"
-        android:hint="@string/hint_locationDescription"
-        android:background="@drawable/text_input_rounding"
-        android:inputType="textMultiLine"
-        android:maxLength="30"
-        android:maxLines="1"
-        android:minHeight="48dp"
-        android:padding="8dp"
-        android:textColor="#757575"
-        android:textColorHint="#757575"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/routeTitle"
-        app:layout_constraintVertical_bias="0.033" />
+        app:layout_constraintVertical_bias="0.122" />
 
     <Button
         android:id="@+id/chooseImage"
@@ -90,26 +38,13 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/description"
-        app:layout_constraintVertical_bias="0.077" />
-
-    <ImageView
-        android:id="@+id/routeImage"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:maxHeight="400px"
-        android:minHeight="300px"
-        app:layout_constraintBottom_toTopOf="@+id/routeLocation"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chooseImage"
-        app:layout_constraintVertical_bias="0.527"
-        app:srcCompat="@mipmap/ic_launcher" />
+        app:layout_constraintVertical_bias="0.074" />
 
     <Button
         android:id="@+id/routeLocation"
         android:layout_width="296dp"
         android:layout_height="48dp"
-        android:layout_marginTop="188dp"
+        android:layout_marginTop="196dp"
         android:background="@drawable/text_input_rounding"
         android:text="@string/button_location"
         app:layout_constraintEnd_toEndOf="@+id/chooseImage"
@@ -121,13 +56,76 @@
         android:id="@+id/btnAdd"
         android:layout_width="296dp"
         android:layout_height="48dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/text_input_rounding"
         android:text="@string/button_addRoute"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/routeLocation"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/routeLocation"
-        app:layout_constraintTop_toBottomOf="@+id/routeLocation"
-        app:layout_constraintVertical_bias="0.187" />
+        app:layout_constraintTop_toBottomOf="@+id/routeLocation" />
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="296dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="52dp"
+        android:background="@drawable/text_input_rounding"
+        android:text="@string/button_deleteRoute"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnAdd"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btnAdd"
+        app:layout_constraintTop_toBottomOf="@+id/btnAdd"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/routeImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:maxHeight="150dp"
+        android:minHeight="100dp"
+        app:layout_constraintBottom_toTopOf="@+id/routeLocation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chooseImage"
+        app:layout_constraintVertical_bias="0.533"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <EditText
+        android:id="@+id/description"
+        android:layout_width="356dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/text_input_rounding"
+        android:hint="@string/hint_locationDescription"
+        android:inputType="textMultiLine"
+        android:maxLength="1000"
+        android:maxLines="1"
+        android:minHeight="48dp"
+        android:padding="8dp"
+        android:textColor="#757575"
+        android:textColorHint="#757575"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/routeName"
+        app:layout_constraintVertical_bias="0.021" />
+
+    <TextView
+        android:id="@+id/btnLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/logout"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/routeName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.271" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

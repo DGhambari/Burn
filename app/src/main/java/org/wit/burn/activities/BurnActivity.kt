@@ -9,7 +9,7 @@ import android.view.MenuItem
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import com.google.android.material.snackbar.Snackbar
-//import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseAuth
 import com.squareup.picasso.Picasso
 import org.wit.burn.helpers.showImagePicker
 import org.wit.burn.main.MainApp
@@ -17,6 +17,7 @@ import org.wit.burn.models.Location
 import org.wit.burn.models.BurnModel
 import org.wit.burn.R
 import org.wit.burn.databinding.ActivityBurnBinding
+import android.view.View
 import timber.log.Timber.i
 
 class BurnActivity : AppCompatActivity() {
@@ -32,7 +33,6 @@ class BurnActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         var edit = false
-        var delete = false
 
         binding = ActivityBurnBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -46,11 +46,10 @@ class BurnActivity : AppCompatActivity() {
         if (intent.hasExtra("burn_edit")) {
             edit = true
             burn = intent.extras?.getParcelable("burn_edit")!!
-            binding.routeTitle.setText(burn.title)
+            binding.routeName.setText(burn.title)
             binding.description.setText(burn.description)
-//            binding.latitude.setText(burn.latitude)
-//            binding.longitude.setText(burn.longitude)
             binding.btnAdd.setText(R.string.save_location)
+            binding.btnDelete.visibility = View.VISIBLE
             Picasso.get()
                 .load(burn.image)
                 .into(binding.routeImage)
@@ -59,8 +58,12 @@ class BurnActivity : AppCompatActivity() {
             }
         }
 
+        binding.btnDelete.setOnClickListener {
+            deleteBurn()
+        }
+
         binding.btnAdd.setOnClickListener() {
-            burn.title = binding.routeTitle.text.toString()
+            burn.title = binding.routeName.text.toString()
             burn.description = binding.description.text.toString()
             if (burn.title.isEmpty()) {
                 Snackbar.make(it,R.string.enter_route_title, Snackbar.LENGTH_LONG)
@@ -80,13 +83,15 @@ class BurnActivity : AppCompatActivity() {
             finish()
         }
 
-//        // Logout from app
-//        binding.btnLogout.setOnClickListener{
-//            FirebaseAuth.getInstance().signOut()
-//
-//            startActivity(Intent(this@BurnActivity, LoginActivity::class.java))
-//            finish()
-//        }
+        binding.btnLogout.setOnClickListener{
+            FirebaseAuth.getInstance().signOut()
+
+            val intent = Intent(this@BurnActivity, LoginActivity::class.java)
+
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+            finish()
+        }
 
         binding.chooseImage.setOnClickListener {
             i("Select image")
@@ -110,7 +115,7 @@ class BurnActivity : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.menu_burn, menu)
+        menuInflater.inflate(R.menu.main_menu, menu)
         return super.onCreateOptionsMenu(menu)
     }
 
@@ -118,6 +123,9 @@ class BurnActivity : AppCompatActivity() {
         when (item.itemId) {
             R.id.item_cancel -> {
                 finish()
+            }
+            R.id.btnDelete -> {
+                deleteBurn()
             }
         }
         return super.onOptionsItemSelected(item)
@@ -136,7 +144,7 @@ class BurnActivity : AppCompatActivity() {
                                 .load(burn.image)
                                 .into(binding.routeImage)
                             binding.chooseImage.setText(R.string.change_route_image)
-                        } // end of if
+                        }
                     }
                     RESULT_CANCELED -> { } else -> { }
                 }
@@ -156,10 +164,23 @@ class BurnActivity : AppCompatActivity() {
                             burn.lat = location.lat
                             burn.lng = location.lng
                             burn.zoom =location.zoom
-                        } // end of if
+                        }
                     }
                     RESULT_CANCELED -> { } else -> { }
                 }
             }
+    }
+
+    private fun deleteBurn() {
+        android.app.AlertDialog.Builder(this)
+            .setTitle("Delete Route")
+            .setMessage("Are you sure you want to delete this route?")
+            .setPositiveButton("Yes") { _, _ ->
+                app.burns.delete(burn)
+                setResult(RESULT_OK)
+                finish()
+            }
+            .setNegativeButton("No", null)
+            .show()
     }
 }

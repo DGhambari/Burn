@@ -33,7 +33,7 @@ class BurnAdapter constructor(private var burns: List<BurnModel>,
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(burn: BurnModel, listener: BurnListener) {
-            binding.routeTitle.text = burn.title
+            binding.routeName.text = burn.title
             binding.description.text = burn.description
             Picasso.get().load(burn.image).resize(200,200).into(binding.imageIcon)
             binding.root.setOnClickListener { listener.onBurnClick(burn) }

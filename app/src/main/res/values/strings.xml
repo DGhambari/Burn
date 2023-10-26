@@ -46,5 +46,7 @@
     <string name="submit">Submit</string>
     <string name="back">Back</string>
     <string name="forgotPassword">Forgot Password?</string>
+    <string name="delete">Delete</string>
+    <string name="button_deleteRoute">Delete Route</string>
 
 </resources>
